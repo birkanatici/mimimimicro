@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: api-gateway-service
+  profiles:
+    active: native
+  cloud:
+    config:
+      uri: http://config-service:8080
+      profile: native
