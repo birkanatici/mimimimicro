@@ -11,11 +11,11 @@
 ````
 ------
 ### Modules (mimimi microphones):
-1. api-gateway-service (aka. proxy service)
-2. config-service (spring cloud config server)
-3. registry-service (Registration and Discovery service - Netflix Eureka)
-4. service-a (Greeting micro service)
-5. service-b (Greeting micro service)
+1. api-gateway-service (aka. proxy service also CircuitBreaker  - `spring.cloud.gateway & Hystrix`)
+2. config-service (contains all module configs - `spring.cloud.config.server` )
+3. registry-service (Registration and Discovery service - `Netflix Eureka`)
+4. service-a (Greeting micro service - `Spring Boot App`)
+5. service-b (Greeting micro service - `Spring Boot App`)
 
 ------
 ### Run all instances:
