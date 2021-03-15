@@ -2,16 +2,23 @@
 
 ------
 
-### dependencies:
+### Dependencies:
 ````
 - jdk 11
 - maven 3.6.3
 - docker 
 - also keyboard and maybe mouse 
 ````
+------
+### Modules (mimimi microphones):
+1. api-gateway-service (aka. proxy service)
+2. config-service (spring cloud config server)
+3. registry-service (Registration and Discovery service - Netflix Eureka)
+4. service-a (Greeting micro service)
+5. service-b (Greeting micro service)
 
 ------
-### run all instances:
+### Run all instances:
 1. `chmod a+x ./docker-build.sh`
 2. `./docker-build.sh`
 3. `docker compose up`
