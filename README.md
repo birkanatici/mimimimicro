@@ -13,7 +13,8 @@
 ------
 ### run all instances:
 1. `chmod a+x ./docker-build.sh`
-2. `docker compose up`
+2. `./docker-build.sh`
+3. `docker compose up`
 
 ----------
 #### Get greetings from Service-A:
