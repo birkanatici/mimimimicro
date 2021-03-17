@@ -1,6 +1,11 @@
 version: '3.1'
 
 services:
+  zipkin-service:
+    image: openzipkin/zipkin-slim
+    ports:
+    - "9411:9411"
+
   config-service:
     image: config-service:latest
     healthcheck:
