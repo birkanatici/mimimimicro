@@ -1,4 +1,4 @@
-## mimimimicro is a sample dockerized microservice template project.
+## mimimimicro is a sample dockerized microservice project.
 
 ------
 
