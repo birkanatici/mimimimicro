@@ -13,6 +13,11 @@ services:
     image: registry-service:latest
     ports:
     - "8081:8081"
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8081/actuator/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
     depends_on:
       config-service:
         condition: service_healthy
@@ -21,18 +26,23 @@ services:
     image: api-gateway-service:latest
     ports:
       - "80:80"
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost/actuator/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
     depends_on:
-      config-service:
+      registry-service:
         condition: service_healthy
 
   service-a:
     image: service-a:latest
     depends_on:
-      config-service:
+      api-gateway-service:
         condition: service_healthy
 
   service-b:
     image: service-b:latest
     depends_on:
-      config-service:
+      api-gateway-service:
         condition: service_healthy
