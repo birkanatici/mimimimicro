@@ -7,7 +7,6 @@
 - jdk 11
 - maven 3.6.3
 - docker 
-- also keyboard and maybe mouse 
 ````
 ------
 ### Modules (mimimi microphones):
@@ -19,9 +18,8 @@
 
 ------
 ### Run all instances:
-1. `chmod a+x ./docker-build.sh`
-2. `./docker-build.sh`
-3. `docker compose up`
+1. `chmod a+x *.sh`
+2. `./run.sh`
 
 ----------
 #### Get greetings from Service-A:
