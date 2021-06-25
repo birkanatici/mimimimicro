@@ -1,6 +1,7 @@
 # mimimimicro
 mimimimicro is a sample dockerized microservice project.
 
+
 ## 🔨 Dependencies
 ```
 - jdk 11
